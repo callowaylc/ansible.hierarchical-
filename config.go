@@ -6,6 +6,9 @@ import (
   yaml "gopkg.in/yaml.v2"
 )
 
+type Config struct {
+  Stack []string
+}
 var c Config = Config{}
 
 func InitConfig() {

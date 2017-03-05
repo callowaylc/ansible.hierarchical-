@@ -8,14 +8,12 @@ import(
 func init() {
   a.InitLogs()
   a.InitOptions()
-
-  a.Logs("init hieransible", a.LogFields{
-    "options": a.GetOptions(),
-  })
 }
 
 func main() {
-  options := a.GetOptions()
+  a.Logs("init hieransible", a.LogFields{
+    "options": a.GetOptions(),
+  })
 
   os.Exit(0)
 }

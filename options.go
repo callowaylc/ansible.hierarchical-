@@ -2,13 +2,12 @@ package hieransible
 
 import(
   "os"
-  "fmt"
   flags "github.com/jessevdk/go-flags"
 )
 
 // build inventory and build hosts file; maybe all in one..k
 type Options struct {
-  Inventory string `required:"true" default:"/etc/ansible/hosts" short:"i" long:"inventory-file" description:"specify inventory host path"`
+  Inventory string `default:"/etc/ansible/hosts" short:"i" long:"inventory-file" description:"specify inventory host path"`
   Install bool `long:"install" description:"installs hieransible inventory and host definitions"`
   Facts string `long:"facts" description:"determines facts for a given host"`
   Groups string `long:"groups" description:"determines groups for a given host"`
@@ -28,7 +27,6 @@ func InitOptions() {
     default:
       os.Exit(2)
     }
-
   } else if err != nil {
     panic(err)
   }
