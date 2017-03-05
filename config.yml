@@ -1,0 +1,4 @@
+---
+stack:
+  - ec2.py
+  - inject
